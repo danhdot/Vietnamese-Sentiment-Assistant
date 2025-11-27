@@ -1,0 +1,40 @@
+.history-wrapper {
+  overflow-x: auto;
+  margin-top: 1.5rem;
+}
+
+.history-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-wrapper th,
+.history-wrapper td {
+  padding: 0.75rem;
+  border-bottom: 1px solid #ececec;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.badge-positive {
+  background: #16a34a;
+}
+
+.badge-neutral {
+  background: #6b7280;
+}
+
+.badge-negative {
+  background: #dc2626;
+}
+
+.history-empty {
+  margin-top: 1.5rem;
+  color: #6b7280;
+}
