@@ -5,7 +5,7 @@ from transformers import pipeline
 # Model duy nhất sử dụng
 MODEL_NAME = 'wonrax/phobert-base-vietnamese-sentiment'
 
-def load_tests_case(path='tests/test_cases.json'):
+def load_tests_case(path='test_cases.json'):
     """Tải các test case từ file JSON"""
     with open(path, 'r', encoding='utf-8') as f:
         return json.load(f)
@@ -29,7 +29,7 @@ def normalize_label(label):
         return 'NEUTRAL'
     return label
 
-def run_tests(tests_path='tests/test_cases.json'):
+def run_tests(tests_path='test_cases.json'):
     """Chạy các test case và đánh giá kết quả"""
     tests = load_tests_case(tests_path)
     model = get_model()
@@ -67,6 +67,6 @@ def run_tests(tests_path='tests/test_cases.json'):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--tests', type=str, default='tests/test_cases.json', help='Đường dẫn đến file JSON chứa test cases')
+    parser.add_argument('--tests', type=str, default='test_cases.json', help='Đường dẫn đến file JSON chứa test cases')
     args = parser.parse_args()
     run_tests(tests_path=args.tests)
